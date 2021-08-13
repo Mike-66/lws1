@@ -18,7 +18,9 @@ mix.js('resources/js/app.js', 'public/js')
         require('tailwindcss'),
         require('autoprefixer'),
     ])
-    .webpackConfig(require('./webpack.config'));
+    .webpackConfig(require('./webpack.config'),
+                    require("dotenv").config());
+
 
 if (mix.inProduction()) {
     mix.version();
